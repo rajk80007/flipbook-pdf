@@ -23,7 +23,7 @@ const FlipBook = ({ pdfUrl }) => {
 
   return (
     <div className="flipbook-container">
-      <div className="flipbook-nav">
+      <div className="flipbook-nav flex w-[800px]">
         <button onClick={() => goToPage(pageNumber - 1)} disabled={pageNumber <= 1}
         className='btn'>
           Previous
@@ -38,8 +38,9 @@ const FlipBook = ({ pdfUrl }) => {
         <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js`}>
           <Viewer fileUrl={pdfUrl}
           onLoadSuccess={onLoadSuccess} 
-          initialPage={pageNumber-1}/>
-
+          initialPage={pageNumber-1}
+          className="flex w-full h-screen overflow-auto"/>
+          
         </Worker>
       </div>
     </div>

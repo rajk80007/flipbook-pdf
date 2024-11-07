@@ -31,7 +31,7 @@ function App() {
 
 
   return (
-    <div className="App bg-gray-50 min-h-screen flex items-center justify-center py-10">
+    <div className="App bg-gray-50 min-h-screen flex flex-col items-center justify-center py-10">
       <header className="text-center mb-10">
         <h1 className="text-3xl font-extrabold text-gray-900">PDF to Flipbook Converter</h1>
         <p className="mt-2 text-lg text-gray-700">Upload a PDF to view it as a flipbook</p>
@@ -50,7 +50,7 @@ function App() {
       </div>
 
       {/* Display the Flipbook when PDF is loaded */}
-      {pdfUrl && <FlipBook pdfUrl={pdfUrl} />}
+      {pdfUrl && <FlipBook pdfUrl={pdfUrl} className='w-full' />}
 
       {/* Download button */}
       {pdfUrl && (
