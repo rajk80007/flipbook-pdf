@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this to your tailwind CSS file */
+.flipbook-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flipbook-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.pdf-viewer {
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
